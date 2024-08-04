@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento - Let's Find Events</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav container">
+        <a href="index.html" class="logo">Even<span>to</span></a>
+        <a href="contact.htm" class="contact">Contact</a>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-text container">
+        <h2 class="home-title">The Event Finder</h2>
+        <span class="home-subtitle">Your source of latest events</span>
+      </div>
+    </section>
+
+    <!-- event filter -->
+
+    <div class="event-filter container">
+      <span
+        class="filter-item active-filter"
+        onclick="fetchAllEventsParams('')"
+        data-filter="all"
+        id="all"
+        >All</span
+      >
+      <span
+        class="filter-item"
+        onclick="fetchAllEventsParams('gdsc')"
+        data-filter="gdsc"
+        id="gdsc"
+        >GDSC</span
+      >
+      <span
+        class="filter-item"
+        onclick="fetchAllEventsParams('ecell')"
+        data-filter="ecell"
+        id="ecell"
+        >ECELL</span
+      >
+      <span
+        class="filter-item"
+        onclick="fetchAllEventsParams('ieee')"
+        data-filter="ieee"
+        id="ieee"
+        >IEEE</span
+      >
+    </div>
+
+    <!-- events -->
+    <section class="event container" id="allPosts"></section>
+
+    <!-- footer -->
+
+    <div class="footer container">
+      <p>&#169; Evento All Right Reserved</p>
+      <div class="socail">
+        <a href="#">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+      fetchAllEvents();
+    </script>
+  </body>
+</html>
